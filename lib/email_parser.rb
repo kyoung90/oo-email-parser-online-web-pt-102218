@@ -9,9 +9,9 @@ class EmailParser
   end 
   def parse 
       if @emails.match(/,/)
-        return @emails.split(", ")
+        return @emails.split(", ").uniq
       else 
-        return @emails.split(" ")
+        return @emails.split(" ").uniq
       end 
   end 
 end 
