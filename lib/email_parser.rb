@@ -9,7 +9,11 @@ class EmailParser
   end 
   def parse 
       if @emails.match(/,/)
-        return @emails.split(/\W/).uniq
+        halfSplit = @emails.split(", ")
+        halfSplit.collect! do |emails|
+          emails.split(" ")
+        end
+        halfSplit.flatten.uniq
       else 
         return @emails.split(" ").uniq
       end 
