@@ -9,7 +9,7 @@ class EmailParser
   end 
   def parse 
       if @emails.match(/,/)
-        return @emails.split(/\W\W|\W/).uniq
+        return @emails.split(/\W/).uniq
       else 
         return @emails.split(" ").uniq
       end 
