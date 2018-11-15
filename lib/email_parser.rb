@@ -8,6 +8,6 @@ class EmailParser
     @emails = emails
   end 
   def parse 
-      @emails.match(/,/)
+      if @emails.match(/,/)
   end 
 end 
